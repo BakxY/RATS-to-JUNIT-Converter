@@ -17,7 +17,7 @@ rats_output = ET.parse(sys.argv[1])
 rats_output_root = rats_output.getroot()
 
 root = ET.Element("testsuites", name="RATS")
-testsuites = ET.SubElement(root, "testsuites", 
+testsuites = ET.SubElement(root, "testsuite", 
     name="RATS", 
     timestamp=str(datetime.datetime.now()), 
     hostname=platform.node(), 
