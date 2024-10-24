@@ -63,5 +63,8 @@ for files in rats_output_root.findall("analyzed"):
 testsuites.attrib["errors"] = str(errorCount)
 
 tree = ET.ElementTree(root)
-os.remove(sys.argv[2])
+try:
+    os.remove(sys.argv[2])
+except OSError:
+    pass
 tree.write(sys.argv[2])
