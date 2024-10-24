@@ -9,4 +9,4 @@ Rebuild downstream:
     - docker
   script:
     - apt update && apt-get install curl -y
-    - curl -v --request POST --form "token=$CI_JOB_TOKEN" --form ref=main "https://git.sespra.ch/api/v4/projects/BakxY/ubuntucppcheck/trigger/pipeline"
+    - curl -v --request POST --form "token=$CI_JOB_TOKEN" --form ref=main "https://git.sespra.ch/api/v4/projects/BakxY%2Fubuntucppcheck/trigger/pipeline"
