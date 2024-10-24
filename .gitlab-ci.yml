@@ -8,4 +8,4 @@ Rebuild downstream:
   tags:
     - docker
   script:
-    - curl --request POST --form "token=$CI_JOB_TOKEN" --form ref=main "https://git.sespra.chapi/v4/projects/BakxY/ubuntucppcheck/trigger/pipeline
+    - curl --request POST --form "token=$CI_JOB_TOKEN" --form ref=main "https://git.sespra.chapi/v4/projects/BakxY/ubuntucppcheck/trigger/pipeline"
