@@ -52,10 +52,10 @@ for files in rats_output_root.findall("analyzed"):
                 errorElement = ET.SubElement(testcase, "error")
 
                 errorElement.text = ""
-                errorElement.text += "**Type:** `" + volnType + "`\n"
-                errorElement.text += "**Severity:** `" + volnSeverity + "`\n\n"
-                errorElement.text += "**Security Alert:**" + volnMessage + "\n\n"
-                errorElement.text += "**Location:**\n"
+                errorElement.text += "Type: " + volnType + "\n"
+                errorElement.text += "Severity: " + volnSeverity + "\n\n"
+                errorElement.text += "Security Alert:\n" + volnMessage + "\n\n"
+                errorElement.text += "Location:\n"
 
                 for lines in affectedFiles.findall("line"):
                     errorElement.text += "- At line " + str(lines.text) + "\n"
