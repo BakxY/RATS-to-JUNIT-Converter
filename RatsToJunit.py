@@ -53,8 +53,8 @@ for files in rats_output_root.findall("analyzed"):
 
                 errorElement.text += "**Type:** `" + volnType + "`\n"
                 errorElement.text += "**Severity:** `" + volnSeverity + "`\n\n"
-                errorElement.text += "**Security Alert:**" + volnMessage "\n\n"
-                errorElement.text += "**Location**\n"
+                errorElement.text += "**Security Alert:**" + volnMessage + "\n\n"
+                errorElement.text += "**Location:**\n"
 
                 for lines in affectedFiles.findall("line"):
                     errorElement.text += "- At line " + str(lines.text) + "\n"
