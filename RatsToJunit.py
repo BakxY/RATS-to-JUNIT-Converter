@@ -31,14 +31,13 @@ errorCount = 0
 for files in rats_output_root.findall("analyzed"):
     testcase = ET.SubElement(testsuites, "testcase", 
         name=str(files.text), 
-        classname="RATS report", 
-        time="1.0"
+        classname="RATS analysis"
     )
 
     for vulnerabilities in rats_output_root.findall("vulnerability"):
         for affectedFiles in vulnerabilities.findall("file"):
             if(str(files.text) == str(affectedFiles.find("name").text)):
-                volnMessage = str(vulnerabilities.find("message").text).replace("\n", "").lstrip()
+                volnMessage = str(vulnerabilities.find("message").text).replace("\n", "").lstrip().replace("  ", " ")
 
                 volnType = "Unknown"
                 volnSeverity = "Unknown"
