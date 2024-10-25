@@ -48,13 +48,9 @@ for files in rats_output_root.findall("analyzed"):
                 if(vulnerabilities.find("severity") != None):
                     volnType += "Severity:" + str(vulnerabilities.find("severity").text)
 
-                errorElement = ET.SubElement(
-                    testcase, "error", 
-                    message=volnMessage, 
-                    type=volnType
-                )
+                errorElement = ET.SubElement(testcase, "error")
 
-                errorElement.text = ""
+                errorElement.text = volnType + "\n" + volnMessage + "on \n"
 
                 for lines in affectedFiles.findall("line"):
                     errorElement.text += "Line " + str(lines.text) + "\n"
