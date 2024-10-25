@@ -38,7 +38,7 @@ for files in rats_output_root.findall("analyzed"):
     for vulnerabilities in rats_output_root.findall("vulnerability"):
         for affectedFiles in vulnerabilities.findall("file"):
             if(str(files.text) == str(affectedFiles.find("name").text)):
-                volnMessage = str(vulnerabilities.find("message").text).replace("\n", "")
+                volnMessage = str(vulnerabilities.find("message").text).replace("\n", "").lstrip()
 
                 volnType = ""
 
@@ -50,7 +50,7 @@ for files in rats_output_root.findall("analyzed"):
 
                 errorElement = ET.SubElement(testcase, "error")
 
-                errorElement.text = volnType + "\n" + volnMessage + "on \n"
+                errorElement.text = volnType + "\n" + volnMessage + "\n"
 
                 for lines in affectedFiles.findall("line"):
                     errorElement.text += "Line " + str(lines.text) + "\n"
