@@ -22,8 +22,7 @@ testsuites = ET.SubElement(root, "testsuite",
     timestamp=str(datetime.datetime.now()), 
     hostname=platform.node(), 
     tests=str(len(rats_output_root.findall("analyzed"))), 
-    errors="0", failures="0", skipped="0", 
-    time=str(rats_output_root.find("timing/total_time").text)
+    errors="0", failures="0", skipped="0"
 )
 
 errorCount = 0
@@ -31,6 +30,7 @@ errorCount = 0
 for files in rats_output_root.findall("analyzed"):
     testcase = ET.SubElement(testsuites, "testcase", 
         name=str(files.text), 
+        time=str(int(rats_output_root.find("timing/total_time").text) / len(rats_output_root.findall("analyzed")))
         classname="RATS analysis"
     )
 
