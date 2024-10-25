@@ -40,20 +40,24 @@ for files in rats_output_root.findall("analyzed"):
             if(str(files.text) == str(affectedFiles.find("name").text)):
                 volnMessage = str(vulnerabilities.find("message").text).replace("\n", "").lstrip()
 
-                volnType = ""
+                volnType = "Unknown"
+                volnSeverity = "Unknown"
 
                 if(vulnerabilities.find("type") != None):
-                    volnType += "Type:" + str(vulnerabilities.find("type").text) + ", "
+                    volnType = str(vulnerabilities.find("type").text)
 
                 if(vulnerabilities.find("severity") != None):
-                    volnType += "Severity:" + str(vulnerabilities.find("severity").text)
+                    volnSeverity = str(vulnerabilities.find("severity").text)
 
                 errorElement = ET.SubElement(testcase, "error")
 
-                errorElement.text = volnType + "\n" + volnMessage + "\n"
+                errorElement.text += "**Type:** `" + volnType + "`\n"
+                errorElement.text += "**Severity:** `" + volnSeverity + "`\n\n"
+                errorElement.text += "**Security Alert:**" + volnMessage "\n\n"
+                errorElement.text += "**Location**\n"
 
                 for lines in affectedFiles.findall("line"):
-                    errorElement.text += "Line " + str(lines.text) + "\n"
+                    errorElement.text += "- At line " + str(lines.text) + "\n"
                     errorCount += 1
             
 testsuites.attrib["errors"] = str(errorCount)
