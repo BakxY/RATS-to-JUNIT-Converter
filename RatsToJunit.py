@@ -30,7 +30,7 @@ errorCount = 0
 for files in rats_output_root.findall("analyzed"):
     testcase = ET.SubElement(testsuites, "testcase", 
         name=str(files.text), 
-        time=str(int(rats_output_root.find("timing/total_time").text) / len(rats_output_root.findall("analyzed"))),
+        time=str(float(rats_output_root.find("timing/total_time").text) / len(rats_output_root.findall("analyzed"))),
         classname="RATS analysis"
     )
 
