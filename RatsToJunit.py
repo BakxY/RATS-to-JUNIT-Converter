@@ -51,6 +51,7 @@ for files in rats_output_root.findall("analyzed"):
 
                 errorElement = ET.SubElement(testcase, "error")
 
+                errorElement.text = ""
                 errorElement.text += "**Type:** `" + volnType + "`\n"
                 errorElement.text += "**Severity:** `" + volnSeverity + "`\n\n"
                 errorElement.text += "**Security Alert:**" + volnMessage + "\n\n"
