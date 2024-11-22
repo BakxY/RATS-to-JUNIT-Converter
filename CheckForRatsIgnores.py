@@ -25,6 +25,15 @@ for vuln in rats_output_root.findall("vulnerability"):
                 print("Found ignore in file \"" + currFile.find("name").text + "\" at line " + str(line.text))
                 currFile.remove(line)
 
+for vuln in rats_output_root.findall("vulnerability"):
+    for currFile in vuln.findall("file"):
+        if currFile.findall("line") == []:
+            vuln.remove(currFile)
+
+for vuln in rats_output_root.findall("vulnerability"):
+    if currFile.findall("file") == []:
+        rats_output_root.remove(vuln)
+
 tree = ET.ElementTree(rats_output_root)
 try:
     os.remove(sys.argv[3])

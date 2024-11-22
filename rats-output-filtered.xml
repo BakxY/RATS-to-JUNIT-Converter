@@ -1,0 +1,47 @@
+<rats_output>
+<stats>
+<dbcount lang="perl">33</dbcount>
+<dbcount lang="ruby">46</dbcount>
+<dbcount lang="python">62</dbcount>
+<dbcount lang="c">334</dbcount>
+<dbcount lang="php">55</dbcount>
+</stats>
+<analyzed>P1/U2/main.c</analyzed>
+<analyzed>P1/U4/main.c</analyzed>
+<analyzed>P2/U1/main</analyzed>
+<analyzed>P2/U1/main.c</analyzed>
+<analyzed>P3/U1/main.c</analyzed>
+<analyzed>P3/U2/main.c</analyzed>
+<analyzed>P3/U3/main.c</analyzed>
+<analyzed>P3/U3 Extra version/main.c</analyzed>
+<analyzed>P4/U1/main.c</analyzed>
+<analyzed>P4/U2/main.c</analyzed>
+<analyzed>P4/U3.1/main.c</analyzed>
+<analyzed>P4/U3.2/main.c</analyzed>
+<analyzed>P5/U1/main.c</analyzed>
+<analyzed>P5/U2/main.c</analyzed>
+<analyzed>P5/U3/main.c</analyzed>
+<analyzed>P6/U2/main.c</analyzed>
+<analyzed>P6/U2 One digit sum of digits/main.c</analyzed>
+<analyzed>P6/U3/main.c</analyzed>
+<analyzed>P6/U4/main.c</analyzed>
+<analyzed>P7/U1/main.c</analyzed>
+<analyzed>P7/U2/main.c</analyzed>
+<analyzed>P7/U3/expect.h</analyzed>
+<analyzed>P7/U3/main.c</analyzed>
+<analyzed>P7/U4/expect.h</analyzed>
+<analyzed>P7/U4/main.c</analyzed>
+<analyzed>P8/U1/main.c</analyzed>
+<analyzed>P8/U2/main.c</analyzed>
+<analyzed>P8/U3/main</analyzed>
+<analyzed>P8/U3/main.c</analyzed>
+<analyzed>P9/U1/expect.h</analyzed>
+<analyzed>P9/U1/main.c</analyzed>
+<analyzed>P9/U2/main.c</analyzed>
+<analyzed>P9/U3/main.c</analyzed>
+<timing>
+<total_lines>1474</total_lines>
+<total_time>0.109186</total_time>
+<lines_per_second>13499</lines_per_second>
+</timing>
+</rats_output>

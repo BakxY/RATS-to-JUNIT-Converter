@@ -1,0 +1,173 @@
+<?xml version="1.0"?><rats_output>
+<stats>
+<dbcount lang="perl">33</dbcount>
+<dbcount lang="ruby">46</dbcount>
+<dbcount lang="python">62</dbcount>
+<dbcount lang="c">334</dbcount>
+<dbcount lang="php">55</dbcount>
+</stats>
+<analyzed>P1/U2/main.c</analyzed>
+<analyzed>P1/U4/main.c</analyzed>
+<analyzed>P2/U1/main</analyzed>
+<analyzed>P2/U1/main.c</analyzed>
+<analyzed>P3/U1/main.c</analyzed>
+<analyzed>P3/U2/main.c</analyzed>
+<analyzed>P3/U3/main.c</analyzed>
+<analyzed>P3/U3 Extra version/main.c</analyzed>
+<analyzed>P4/U1/main.c</analyzed>
+<analyzed>P4/U2/main.c</analyzed>
+<analyzed>P4/U3.1/main.c</analyzed>
+<analyzed>P4/U3.2/main.c</analyzed>
+<analyzed>P5/U1/main.c</analyzed>
+<analyzed>P5/U2/main.c</analyzed>
+<analyzed>P5/U3/main.c</analyzed>
+<analyzed>P6/U2/main.c</analyzed>
+<analyzed>P6/U2 One digit sum of digits/main.c</analyzed>
+<analyzed>P6/U3/main.c</analyzed>
+<analyzed>P6/U4/main.c</analyzed>
+<analyzed>P7/U1/main.c</analyzed>
+<analyzed>P7/U2/main.c</analyzed>
+<analyzed>P7/U3/expect.h</analyzed>
+<analyzed>P7/U3/main.c</analyzed>
+<analyzed>P7/U4/expect.h</analyzed>
+<analyzed>P7/U4/main.c</analyzed>
+<analyzed>P8/U1/main.c</analyzed>
+<analyzed>P8/U2/main.c</analyzed>
+<analyzed>P8/U3/main</analyzed>
+<analyzed>P8/U3/main.c</analyzed>
+<analyzed>P9/U1/expect.h</analyzed>
+<analyzed>P9/U1/main.c</analyzed>
+<analyzed>P9/U2/main.c</analyzed>
+<analyzed>P9/U3/main.c</analyzed>
+<vulnerability>
+  <severity>High</severity>
+  <type>scanf</type>
+  <message>
+    Check to be sure that the format string passed as argument 2 to this
+    function call does not come from an untrusted source that could have added
+    formatting characters that the code is not prepared to handle.
+    Additionally, the format string could contain `%s' without precision that
+    could result in a buffer overflow.
+  </message>
+  <file>
+    <name>P3/U3 Extra version/main.c</name>
+    <line>24</line>
+  </file>
+  <file>
+    <name>P4/U1/main.c</name>
+    <line>25</line>
+  </file>
+  <file>
+    <name>P4/U3.1/main.c</name>
+    <line>21</line>
+  </file>
+  <file>
+    <name>P4/U3.2/main.c</name>
+    <line>20</line>
+  </file>
+  <file>
+    <name>P5/U1/main.c</name>
+    <line>23</line>
+    <line>26</line>
+  </file>
+  <file>
+    <name>P5/U2/main.c</name>
+    <line>22</line>
+    <line>25</line>
+  </file>
+  <file>
+    <name>P5/U3/main.c</name>
+    <line>25</line>
+    <line>28</line>
+    <line>31</line>
+  </file>
+  <file>
+    <name>P7/U2/main.c</name>
+    <line>24</line>
+  </file>
+  <file>
+    <name>P8/U1/main.c</name>
+    <line>23</line>
+    <line>26</line>
+  </file>
+  <file>
+    <name>P8/U2/main.c</name>
+    <line>31</line>
+    <line>34</line>
+    <line>37</line>
+  </file>
+  <file>
+    <name>P9/U3/main.c</name>
+    <line>50</line>
+  </file>
+</vulnerability>
+<vulnerability>
+  <severity>Medium</severity>
+  <type>srand</type>
+  <message>
+    Standard random number generators should not be used to 
+generate randomness used for security reasons.  For security sensitive 
+randomness a crytographic randomness generator that provides sufficient
+entropy should be used.
+  </message>
+  <file>
+    <name>P2/U1/main.c</name>
+    <line>19</line>
+  </file>
+  <file>
+    <name>P6/U4/main.c</name>
+    <line>22</line>
+  </file>
+</vulnerability>
+<vulnerability>
+  <severity>Medium</severity>
+  <type>realloc</type>
+  <message>
+    Don't use on memory intended to be secure, because the old structure will not be zeroed out.
+  </message>
+  <file>
+    <name>P6/U2/main.c</name>
+    <line>27</line>
+  </file>
+  <file>
+    <name>P6/U2 One digit sum of digits/main.c</name>
+    <line>27</line>
+    <line>62</line>
+  </file>
+  <file>
+    <name>P6/U3/main.c</name>
+    <line>29</line>
+  </file>
+  <file>
+    <name>P9/U3/main.c</name>
+    <line>34</line>
+  </file>
+</vulnerability>
+<vulnerability>
+  <severity>Medium</severity>
+  <type>getchar</type>
+  <message>
+    Check buffer boundaries if calling this function in a loop 
+and make sure you are not in danger of writing past the allocated space.
+  </message>
+  <file>
+    <name>P6/U2/main.c</name>
+    <line>42</line>
+  </file>
+  <file>
+    <name>P6/U2 One digit sum of digits/main.c</name>
+    <line>42</line>
+  </file>
+  <file>
+    <name>P6/U3/main.c</name>
+    <line>44</line>
+    <line>72</line>
+    <line>79</line>
+  </file>
+</vulnerability>
+<timing>
+<total_lines>1474</total_lines>
+<total_time>0.109186</total_time>
+<lines_per_second>13499</lines_per_second>
+</timing>
+</rats_output>
