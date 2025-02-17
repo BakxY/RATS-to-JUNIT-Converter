@@ -28,10 +28,13 @@ for vuln in rats_output_root.findall("vulnerability"):
 for vuln in rats_output_root.findall("vulnerability"):
     for currFile in vuln.findall("file"):
         if currFile.findall("line") == []:
+            print("Line: " + str(currFile.findall("line")))
             vuln.remove(currFile)
 
+
+
 for vuln in rats_output_root.findall("vulnerability"):
-    if currFile.findall("file") == []:
+    if vuln.findall("file") == []:
         rats_output_root.remove(vuln)
 
 tree = ET.ElementTree(rats_output_root)
